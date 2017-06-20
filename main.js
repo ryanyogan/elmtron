@@ -1,11 +1,11 @@
 'use strict';
 
 const electron = require('electron');
+const chokidar = require('chokidar');
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
 
 let mainWindow;
-
 
 const createWindow = () => {
   mainWindow = new BrowserWindow({
@@ -20,6 +20,13 @@ const createWindow = () => {
     mainWindow = null;
   });
 };
+
+chokidar.watch(['ports.js', 'index.html', 'elm.js']).on('change', () => {
+  console.log('CHANGE');
+  if (mainWindow) {
+    mainWindow.reload();
+  }
+});
 
 app.on('ready', createWindow);
 

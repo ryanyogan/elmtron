@@ -5,7 +5,14 @@
   "repository": {},
   "author": "Ryan Yogan <ryanyogan@gmail.com>",
   "license": "MIT",
+  "scripts":{
+    "elm": "elm make Main.elm --output elm.js",
+    "elm:watch": "chokidar '**/*.elm' -c 'yarn run elm'",
+    "start": "electron main.js",
+    "watch": "yarn run start && yarn run elm:watch & wait"
+  },
   "dependencies": {
+    "chokidar-cli": "^1.2.0",
     "electron": "^1.6.11"
   }
 }
