@@ -4,5 +4,8 @@
   "main": "index.js",
   "repository": {},
   "author": "Ryan Yogan <ryanyogan@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^1.6.11"
+  }
 }
