@@ -1,0 +1,8 @@
+{
+  "name": "elmtron",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {},
+  "author": "Ryan Yogan <ryanyogan@gmail.com>",
+  "license": "MIT"
+}
